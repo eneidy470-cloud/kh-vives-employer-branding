@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tesis Eneidy| KH Vives - Superagencia 2026</title>
+  <title>Talento KH | KH Vives S.L. - Superagencia 2026</title>
   <meta name="description" content="Employer Branding y Superagencia: Transformando la Experiencia del Empleado en Grupo KH Vives S.L. Precisión industrial. Talento en el centro.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,12 +20,1116 @@
       --glass: rgba(255, 255, 255, 0.03);
       --glass-border: rgba(255, 255, 255, 0.1);
       --text-primary: #ffffff;
+      --text-secondary: #a0aabf;
+      --text-muted: #666;
+      --accent-blue: #1d4ed8;
+      --accent-green: #22c55e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--kh-black);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Fondo con gradientes sutiles */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 10% 20%, var(--kh-red-glow) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(29, 78, 216, 0.1) 0%, transparent 40%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* ========== HEADER / NAVBAR ========== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(5, 5, 5, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 15px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 10px var(--kh-red-glow));
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--text-primary);
+    }
+
+    .brand-name span {
+      color: var(--kh-red);
+    }
+
+    .brand-tagline {
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .btn-candidatura {
+      background: var(--kh-red);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+      text-decoration: none;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px var(--kh-red-glow);
+    }
+
+    .btn-candidatura:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px var(--kh-red-glow);
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      padding: 120px 5% 80px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -2px;
+    }
+
+    .hero-content h1 span {
+      color: var(--kh-red);
+      text-shadow: 0 0 30px var(--kh-red-glow);
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      color: var(--text-secondary);
+      margin-bottom: 30px;
+      max-width: 500px;
+    }
+
+    .badge-superagencia {
+      display: inline-block;
+      background: rgba(204, 0, 0, 0.15);
+      border: 1px solid var(--kh-red);
+      color: var(--kh-red);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--kh-red);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.3s;
+      box-shadow: 0 10px 30px var(--kh-red-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px var(--kh-red-glow);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-primary);
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      border: 1px solid var(--glass-border);
+      transition: all 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background: var(--glass);
+      border-color: var(--text-secondary);
+    }
+
+    /* KPIs Panel */
+    .kpi-panel {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 40px;
+      backdrop-filter: blur(20px);
+    }
+
+    .kpi-header {
+      margin-bottom: 30px;
+    }
+
+    .kpi-header h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .kpi-header p {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .kpi-box {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .kpi-box:hover {
+      border-color: var(--kh-red);
+      transform: translateY(-5px);
+    }
+
+    .kpi-value {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--kh-red);
+      display: block;
+    }
+
+    .kpi-label {
+      font-size: 11px;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 5px;
+    }
+
+    /* ========== MODELO SUPERAGENCIA ========== */
+    .section {
+      padding: 100px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .section-header p {
+      color: var(--text-secondary);
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .feature-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 35px;
+      backdrop-filter: blur(10px);
+      transition: all 0.4s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--kh-red), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .feature-card:hover {
+      border-color: var(--kh-red);
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .feature-card:hover::before {
+      opacity: 1;
+    }
+
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(204, 0, 0, 0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .feature-card h3 {
+      color: var(--kh-red);
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .feature-card p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* ========== EVP SECTION ========== */
+    .evp-section {
+      background: linear-gradient(180deg, var(--kh-dark) 0%, var(--kh-black) 100%);
+      padding: 100px 5%;
+    }
+
+    .evp-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .evp-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .evp-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 30px;
+      padding: 40px;
+      text-align: center;
+      backdrop-filter: blur(20px);
+      transition: all 0.4s;
+    }
+
+    .evp-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--kh-red);
+    }
+
+    .evp-phase {
+      display: inline-block;
+      background: var(--kh-red);
+      color: white;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .evp-card h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: var(--text-primary);
+    }
+
+    .evp-card p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* ========== QUIENES SOMOS ========== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-content h2 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--text-secondary);
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .stat-item {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 25px;
+    }
+
+    .stat-value {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--kh-red);
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 5px;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 24px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ========== VACANTES ========== */
+    .vacantes-section {
+      background: var(--kh-gray);
+      padding: 100px 5%;
+    }
+
+    .vacantes-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .vacante-card {
+      background: var(--kh-dark);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s;
+    }
+
+    .vacante-card:hover {
+      border-color: var(--kh-red);
+      transform: translateX(10px);
+    }
+
+    .vacante-info h4 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .vacante-meta {
+      display: flex;
+      gap: 20px;
+    }
+
+    .vacante-meta span {
+      color: var(--text-secondary);
+      font-size: 13px;
+    }
+
+    .btn-aplicar {
+      background: transparent;
+      border: 1px solid var(--kh-red);
+      color: var(--kh-red);
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn-aplicar:hover {
+      background: var(--kh-red);
+      color: white;
+    }
+
+    /* ========== CONTACTO ========== */
+    .contact-section {
+      padding: 100px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .contact-info h2 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      color: var(--text-secondary);
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(204, 0, 0, 0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--kh-red);
+      font-size: 20px;
+    }
+
+    .contact-form {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 40px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      background: var(--kh-dark);
+      border: 1px solid var(--glass-border);
+      border-radius: 10px;
+      color: var(--text-primary);
+      font-size: 14px;
+      font-family: inherit;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--kh-red);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--kh-red);
+      color: white;
+      padding: 16px;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-submit:hover {
+      box-shadow: 0 10px 30px var(--kh-red-glow);
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--kh-dark);
+      border-top: 1px solid var(--glass-border);
+      padding: 60px 5% 30px;
+    }
+
+    .footer-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand .logo-box {
+      margin-bottom: 20px;
+    }
+
+    .footer-brand p {
+      color: var(--text-secondary);
+      font-size: 13px;
+      max-width: 300px;
+    }
+
+    .footer-links h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+
+    .footer-links a {
+      display: block;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 13px;
+      margin-bottom: 10px;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--kh-red);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--glass-border);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-bottom p {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 15px;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .footer-social a:hover {
+      border-color: var(--kh-red);
+      color: var(--kh-red);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-subtitle {
+        margin: 0 auto 30px;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .kpi-panel {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .evp-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .kpi-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+    }
+
+    /* Animaciones sutiles */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-content,
+    .kpi-panel,
+    .feature-card,
+    .evp-card {
+      animation: fadeInUp 0.8s ease-out forwards;
     }
   </style>
 </head>
 <body>
-  <h1>Bienvenido al Portal de Employer Branding KH Vives</h1>
-  <p>Superagencia 2026 - Talento en el centro.</p>
-<p>Desarrollado por Eneidy Vargas como parte de su tesis universitaria</p>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-container">
+      <div class="logo-box">
+        <img src="Logo-KH-sin-fondo.png" alt="KH Vives Logo" class="logo-img">
+        <div class="brand-text">
+          <span class="brand-name">Talento <span>KH</span></span>
+          <span class="brand-tagline">Employer Branding • Industria 4.0 • Superagencia</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#modelo">Nuestra Diferencia</a>
+        <a href="#evp">Propuesta de Valor</a>
+        <a href="#nosotros">Quiénes Somos</a>
+        <a href="#vacantes">Ver Vacantes</a>
+        <a href="#contacto" class="btn-candidatura">Candidatura Espontánea</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="badge-superagencia">Tecnología Ford Q1 Aplicada al Talento</div>
+      <h1>Precisión industrial.<br>Talento en el <span>centro</span>.</h1>
+      <p class="hero-subtitle">Bienvenido al ecosistema de KH Vives. Un modelo de Superagencia donde el Humanismo Digital potencia tu carrera técnica en la industria automotriz.</p>
+      <div class="hero-buttons">
+        <a href="#vacantes" class="btn-primary">Explorar Oportunidades</a>
+        <a href="#modelo" class="btn-secondary">Conocer el Modelo</a>
+      </div>
+    </div>
+    <div class="kpi-panel">
+      <div class="kpi-header">
+        <h3>Impacto Esperado (Año 1)</h3>
+        <p>Métricas clave del modelo de Superagencia</p>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi-box">
+          <span class="kpi-value">&gt; 80</span>
+          <span class="kpi-label">eNPS</span>
+        </div>
+        <div class="kpi-box">
+          <span class="kpi-value">&gt; 20%</span>
+          <span class="kpi-label">Reducción Rotación</span>
+        </div>
+        <div class="kpi-box">
+          <span class="kpi-value">&lt; 8.000 €</span>
+          <span class="kpi-label">Ahorro Onboarding</span>
+        </div>
+        <div class="kpi-box">
+          <span class="kpi-value">&gt; 1.4</span>
+          <span class="kpi-label">ROI Neto (Año 1)</span>
+        </div>
+        <div class="kpi-box">
+          <span class="kpi-value">&gt; 25.000 €</span>
+          <span class="kpi-label">Ahorro total anual</span>
+        </div>
+        <div class="kpi-box">
+          <span class="kpi-value">24/7</span>
+          <span class="kpi-label">Mentoría Digital</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODELO SUPERAGENCIA -->
+  <section class="section" id="modelo">
+    <div class="section-header">
+      <h2>Nuestra Diferencia: Modelo de Superagencia KH</h2>
+      <p>Un ecosistema donde la tecnología no reemplaza al humano, lo convierte en una Superagencia. Los cuatro pilares que transforman la experiencia del empleado.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Crecimiento</h3>
+        <p>Desarrollamos el potencial de nuestro talento técnico. Cada empleado tiene un plan de carrera personalizado con acceso a micro-formación 24/7 diseñada para la excelencia operativa.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧠</div>
+        <h3>Integración de Mentes</h3>
+        <p>Unimos el conocimiento tácito de nuestros maestros veteranos con las capacidades de la IA. Preservamos el saber hacer mediante gemelos digitales y transferencia de conocimiento estructurada.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📋</div>
+        <h3>Vacantes (Demo)</h3>
+        <p>Gestión de talento conectada con las necesidades reales de producción. Sistema de matching inteligente entre competencias técnicas y oportunidades de crecimiento interno.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📝</div>
+        <h3>Candidatura Espontánea</h3>
+        <p>Únete a nuestro ecosistema de talento. Evaluamos perfiles técnicos con potencial de Superagencia para futuras incorporaciones estratégicas.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <h3>Vacantes (Demo)</h3>
+        <p>Explora las oportunidades activas en nuestras líneas de producción Ford. Cada posición incluye formación técnica certificada y plan de desarrollo profesional.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Aún más Rápido</h3>
+        <p>Procesos ágiles y sin burocracia. Gestiona tu carrera, turnos y objetivos desde tu propio centro de control digital con respuesta en tiempo real.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVP - PROPUESTA DE VALOR -->
+  <section class="evp-section" id="evp">
+    <div class="evp-container">
+      <div class="section-header">
+        <h2>Propuesta de Valor al Empleado</h2>
+        <p>Nuestra tecnología Ford Q1 ahora aplicada a tu Experiencia de Empleado. Tres dimensiones que definen el modelo de Superagencia KH.</p>
+      </div>
+      <div class="evp-grid">
+        <div class="evp-card">
+          <span class="evp-phase">Fase 1: Mente</span>
+          <h3>Saber Hacer</h3>
+          <p>Digitalizamos el conocimiento de nuestros maestros. Accede a micro-formación técnica 24/7 diseñada para la excelencia. Cápsulas de 3 minutos optimizadas por IA para tu aprendizaje rápido en planta.</p>
+        </div>
+        <div class="evp-card">
+          <span class="evp-phase">Fase 2: Tiempo</span>
+          <h3>Agilidad</h3>
+          <p>Cero burocracia. Gestiona tu carrera, turnos y objetivos desde tu propio centro de control digital. Más tiempo para crear, menos para tramitar. Tu portal gestiona nóminas y feedback en tiempo real.</p>
+        </div>
+        <div class="evp-card">
+          <span class="evp-phase">Fase 3: Ser</span>
+          <h3>Bienestar</h3>
+          <p>Tu salud es nuestro motor. Nutrición, gimnasio y planes de conciliación integrados en tu día a día. Acceso directo a salud mental porque una pieza perfecta solo sale de un equipo en equilibrio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIÉNES SOMOS -->
+  <section class="section" id="nosotros">
+    <div class="about-grid">
+      <div class="about-content">
+        <h2>Quiénes Somos</h2>
+        <p>Grupo KH Vives S.L. es un referente en el sector automotriz español, proveedor certificado Ford Q1 con más de 25 años de experiencia en la fabricación de componentes de alta precisión.</p>
+        <p>Nuestro modelo de <strong>Superagencia</strong> representa la evolución del trabajo industrial: donde el talento técnico es potenciado por el Humanismo Digital y la Industria 4.0.</p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-value">+25</span>
+            <span class="stat-label">Años de experiencia</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">Q1</span>
+            <span class="stat-label">Certificación Ford</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">+500</span>
+            <span class="stat-label">Profesionales técnicos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">4.0</span>
+            <span class="stat-label">Industria Digital</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-image">
+        <div style="background: linear-gradient(135deg, var(--kh-gray) 0%, var(--kh-dark) 100%); border-radius: 24px; height: 400px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--glass-border);">
+          <img src="Logo-KH-sin-fondo.png" alt="KH Vives" style="width: 200px; opacity: 0.8; filter: drop-shadow(0 0 30px var(--kh-red-glow));">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VACANTES -->
+  <section class="vacantes-section" id="vacantes">
+    <div class="vacantes-container">
+      <div class="section-header">
+        <h2>Oportunidades Activas</h2>
+        <p>Únete al ecosistema de Superagencia KH. Cada posición incluye formación técnica certificada y plan de desarrollo profesional.</p>
+      </div>
+      <div class="vacante-card">
+        <div class="vacante-info">
+          <h4>Técnico de Calidad - Línea Ford Kuga</h4>
+          <div class="vacante-meta">
+            <span>📍 Valencia, España</span>
+            <span>⏰ Tiempo completo</span>
+            <span>💼 Experiencia: 2+ años</span>
+          </div>
+        </div>
+        <a href="#contacto" class="btn-aplicar">Aplicar →</a>
+      </div>
+      <div class="vacante-card">
+        <div class="vacante-info">
+          <h4>Operario de Producción - Turno Rotativo</h4>
+          <div class="vacante-meta">
+            <span>📍 Valencia, España</span>
+            <span>⏰ Turnos rotativos</span>
+            <span>💼 Formación incluida</span>
+          </div>
+        </div>
+        <a href="#contacto" class="btn-aplicar">Aplicar →</a>
+      </div>
+      <div class="vacante-card">
+        <div class="vacante-info">
+          <h4>Ingeniero de Procesos - Industria 4.0</h4>
+          <div class="vacante-meta">
+            <span>📍 Valencia, España</span>
+            <span>⏰ Tiempo completo</span>
+            <span>💼 Experiencia: 3+ años</span>
+          </div>
+        </div>
+        <a href="#contacto" class="btn-aplicar">Aplicar →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact-section" id="contacto">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Contacto</h2>
+        <p>¿Tienes preguntas sobre nuestro modelo de Superagencia o quieres formar parte del equipo KH Vives? Estamos aquí para ayudarte.</p>
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <strong>Email</strong>
+            <p style="color: var(--text-secondary); margin: 0;">talento@khvives.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <strong>Ubicación</strong>
+            <p style="color: var(--text-secondary); margin: 0;">Valencia, España</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🏭</div>
+          <div>
+            <strong>Sector</strong>
+            <p style="color: var(--text-secondary); margin: 0;">Automoción - Proveedor Ford Q1</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3 style="margin-bottom: 25px;">Candidatura Espontánea</h3>
+        <form>
+          <div class="form-group">
+            <label>Nombre completo</label>
+            <input type="text" placeholder="Tu nombre">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="tu@email.com">
+          </div>
+          <div class="form-group">
+            <label>Área de interés</label>
+            <input type="text" placeholder="Ej: Producción, Calidad, Ingeniería...">
+          </div>
+          <div class="form-group">
+            <label>Mensaje</label>
+            <textarea placeholder="Cuéntanos sobre tu experiencia y motivación..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Enviar Candidatura</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-box">
+            <img src="Logo-KH-sin-fondo.png" alt="KH Vives Logo" class="logo-img" style="width: 40px; height: 40px;">
+            <div class="brand-text">
+              <span class="brand-name" style="font-size: 18px;">Talento <span>KH</span></span>
+              <span class="brand-tagline">Superagencia 2026</span>
+            </div>
+          </div>
+          <p>Transformando la experiencia del empleado en la industria automotriz mediante Humanismo Digital y el modelo de Superagencia.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Empresa</h4>
+          <a href="#nosotros">Quiénes Somos</a>
+          <a href="#modelo">Nuestra Diferencia</a>
+          <a href="#evp">Propuesta de Valor</a>
+          <a href="#">Cultura KH</a>
+        </div>
+        <div class="footer-links">
+          <h4>Talento</h4>
+          <a href="#vacantes">Ver Vacantes</a>
+          <a href="#contacto">Candidatura Espontánea</a>
+          <a href="#">Portal del Empleado</a>
+          <a href="#">Formación</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Aviso Legal</a>
+          <a href="#">Cookies</a>
+          <a href="#">RGPD</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Grupo KH Vives S.L. Todos los derechos reservados. | Employer Branding y Superagencia</p>
+        <div class="footer-social">
+          <a href="#" title="LinkedIn">in</a>
+          <a href="#" title="Twitter">X</a>
+          <a href="#" title="Instagram">ig</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
